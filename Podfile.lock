@@ -1,27 +1,22 @@
 PODS:
   - CollectionViewCenteredFlowLayout (1.0.1)
-  - Differentiator (4.0.1)
-  - ReactorKit (2.1.0):
-    - RxSwift (~> 5.0)
-    - WeakMapTable (~> 1.1)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxDataSources (4.0.1):
-    - Differentiator (~> 4.0)
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.1.1)
-  - WeakMapTable (1.1.0)
+  - Differentiator (3.1.0)
+  - ReactorKit (1.2.1):
+    - RxSwift (>= 4.0.0)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.1.0):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.5.0)
 
 DEPENDENCIES:
-  - CollectionViewCenteredFlowLayout
+  - CollectionViewCenteredFlowLayout (= 1.0.1)
   - ReactorKit
-  - RxCocoa
-  - RxDataSources
-  - RxSwift
+  - RxCocoa (= 4.3.1)
+  - RxDataSources (= 3.1.0)
+  - RxSwift (= 4.5.0)
 
 SPEC REPOS:
   trunk:
@@ -30,20 +25,16 @@ SPEC REPOS:
     - ReactorKit
     - RxCocoa
     - RxDataSources
-    - RxRelay
     - RxSwift
-    - WeakMapTable
 
 SPEC CHECKSUMS:
   CollectionViewCenteredFlowLayout: 339b935be4d8578c59e448c8906117a07c657d85
-  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  ReactorKit: 12a93358c554bb3f167b16b14c40374fa9cd5acd
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
-  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
+  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  ReactorKit: 8be57f0527ad1ac2963cd5c338274a46a01e57a3
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
 
-PODFILE CHECKSUM: 35018afbe5cf469e8e67234e907e5a006f05f148
+PODFILE CHECKSUM: 10925e51fc9197591d5c62cbb7299d8be67a55db
 
 COCOAPODS: 1.9.3

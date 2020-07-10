@@ -4,11 +4,7 @@ public class Stub<Reactor: ReactorKit.Reactor> {
   private unowned var reactor: Reactor
   private let disposeBag: DisposeBag
 
-  @available(*, deprecated, message: "Use 'Reactor.isStubEnabled' instead.")
-  public var isEnabled: Bool {
-    set { self.reactor.isStubEnabled = newValue }
-    get { return self.reactor.isStubEnabled }
-  }
+  public var isEnabled: Bool = false
 
   public let state: StateRelay<Reactor.State>
   public let action: ActionSubject<Reactor.Action>

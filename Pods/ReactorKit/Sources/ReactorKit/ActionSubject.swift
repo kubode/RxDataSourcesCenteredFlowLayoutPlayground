@@ -12,6 +12,7 @@ import RxSwift
 
 /// A special subject for Reactor's Action. It only emits `.next` event.
 public final class ActionSubject<Element>: ObservableType, ObserverType, SubjectType {
+  public typealias E = Element
   typealias Key = UInt
 
   var lock = NSRecursiveLock()
@@ -31,7 +32,7 @@ public final class ActionSubject<Element>: ObservableType, ObserverType, Subject
   }
   #endif
 
-  public func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.Element == Element {
+  public func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == Element {
     self.lock.lock()
     let key = self.nextKey
     self.nextKey += 1

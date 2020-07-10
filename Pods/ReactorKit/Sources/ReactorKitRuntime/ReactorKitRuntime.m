@@ -7,9 +7,7 @@
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     [self swizzleInitializeOfClassNamed:@"UIViewController"];
-    #if !TARGET_OS_MACCATALYST
     [self swizzleInitializeOfClassNamed:@"NSViewController"];
-    #endif
   });
 }
 

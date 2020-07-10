@@ -8,9 +8,6 @@
 
 import class Foundation.NSNull
 
-// Importing RxCocoa also imports RxRelay
-@_exported import RxRelay
-
 import RxSwift
 #if os(iOS)
     import UIKit
@@ -55,7 +52,7 @@ extension RxCocoaError {
             return "Unobservable object `\(object)` was observed as `\(propertyName)` of `\(sourceObject)`."
         case .errorDuringSwizzling:
             return "Error during swizzling."
-        case let .castingError(object, targetType):
+        case .castingError(let object, let targetType):
             return "Error casting `\(object)` to `\(targetType)`"
         }
     }

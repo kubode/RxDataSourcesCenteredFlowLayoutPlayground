@@ -6,9 +6,9 @@ target 'FlexboxPlayground' do
   use_frameworks!
 
   # Pods for FlexboxPlayground
-  pod 'CollectionViewCenteredFlowLayout'
-  pod 'RxCocoa'
-  pod 'RxDataSources'
-  pod 'RxSwift'
+  pod 'CollectionViewCenteredFlowLayout', '1.0.1'
+  pod 'RxCocoa', '4.3.1'
+  pod 'RxDataSources', '3.1.0'
+  pod 'RxSwift', '4.5.0'
   pod 'ReactorKit'
 end

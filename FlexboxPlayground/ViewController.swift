@@ -10,6 +10,7 @@ import UIKit
 import ReactorKit
 import RxCocoa
 import RxDataSources
+import RxSwift
 import CollectionViewCenteredFlowLayout
 
 struct Section: IdentifiableType, Equatable, AnimatableSectionModelType {

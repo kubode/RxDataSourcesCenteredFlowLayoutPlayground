@@ -8,17 +8,11 @@
 
 #if !os(Linux)
 import RxSwift
-import WeakMapTable
-
-private typealias AnyView = AnyObject
-private enum MapTables {
-  static let reactor = WeakMapTable<AnyView, Any>()
-}
 
 /// A View displays data. A view controller and a cell are treated as a view. The view binds user
 /// inputs to the action stream and binds the view states to each UI component. There's no business
 /// logic in a view layer. A view just defines how to map the action stream and the state stream.
-public protocol View: class {
+public protocol View: class, AssociatedObjectStore {
   associatedtype Reactor: ReactorKit.Reactor
 
   /// A dispose bag. It is disposed each time the `reactor` is assigned.
@@ -49,13 +43,20 @@ public protocol View: class {
   func bind(reactor: Reactor)
 }
 
+
+// MARK: - Associated Object Keys
+
+var reactorKey = "reactor"
+var isReactorBindedKey = "isReactorBinded"
+
+
 // MARK: - Default Implementations
 
 extension View {
   public var reactor: Reactor? {
-    get { return MapTables.reactor.value(forKey: self) as? Reactor }
+    get { return self.associatedObject(forKey: &reactorKey) }
     set {
-      MapTables.reactor.setValue(newValue, forKey: self)
+      self.setAssociatedObject(newValue, forKey: &reactorKey)
       self.disposeBag = DisposeBag()
       if let reactor = newValue {
         self.bind(reactor: reactor)
