@@ -17,7 +17,7 @@ PODS:
   - WeakMapTable (1.1.0)
 
 DEPENDENCIES:
-  - CollectionViewCenteredFlowLayout
+  - CollectionViewCenteredFlowLayout (= 1.0.1)
   - ReactorKit
   - RxCocoa
   - RxDataSources
@@ -44,6 +44,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
 
-PODFILE CHECKSUM: 35018afbe5cf469e8e67234e907e5a006f05f148
+PODFILE CHECKSUM: 33e2f68c26abe9dd718dabb23481f34e9ef755c8
 
 COCOAPODS: 1.9.3
